@@ -1,0 +1,44 @@
+
+<p>-------------　↓　グループ要素部分　↓　-------------<p>
+<div class="groupname">
+  <%= @group.group_name %>
+</div>
+<%= @group.group_type %>
+<%= @group.group_image %>
+<%= @group.group_comment %>
+
+<p>-------------　↑　グループ要素部分　↑　--------------<p>
+
+
+<p>-------------　↓　チャット部分　↓　--------------<p>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<form>
+  <label>Say something:</label><br>
+  <input type="text" data-behavior="room_speaker">
+</form>
+
+<p>-------------　↑　チャット部分　↑　--------------<p>
+
+
+<p>-------------　↓　イベントリスト部分　↓　--------------<p>
+
+<!-- イベントのカレントの一覧を出す -->
+<% @events.each do |event| %>
+ <div class="row">
+   <h2>
+    <%= link_to "　#{event.event_name}", events_show_path(event, id: "#{event.id}"), method: :get %>
+   </h2>
+ </div>
+<% end %>
+
+<p>-------------　↑　イベントリスト部分　↑　--------------<p>
+
+<p>-------------　↓　イベントリストへのリンク部分　↓　--------------<p>
+
+<%= link_to "イベントリスト", events_index_path(group_id: session[:group_id]), method: :get %>
+
+<p>-------------　↑　イベントリストへのリンク部分　↑　--------------<p>

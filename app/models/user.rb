@@ -7,4 +7,7 @@ class User < ApplicationRecord
   validates :mail_address, uniqueness: true
 
   has_secure_password validations: true
+
+  has_many :Groups
+
 end

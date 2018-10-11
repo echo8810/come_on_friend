@@ -1,0 +1,21 @@
+.welcome_name {
+  font-size: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.link_box {
+  color: blue;
+  border: 1px solid blue;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 24px;
+  text-align:center;
+  background-color: #FBF5EF;
+
+  &:hover {
+    color: blue;
+  }
+}

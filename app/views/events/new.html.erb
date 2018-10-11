@@ -1,0 +1,53 @@
+<div class="event-top-hero-wrapper text-center">
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <br><br><br><br><br><br>
+        <h1 class="text-center text-white">MAKE EVENT!!
+        <%= form_for @events do |f| %>
+          <div class="form-group">
+            <%= f.label :event_name, class: 'text-white' %>
+            <%= f.text_field :event_name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :event_script, class: 'text-white' %>
+            <%= f.text_field :event_script, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :event_image, class: 'text-white' %>
+            <%= f.text_field :event_image, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :event_day, class: 'text-white' %>
+            <%= f.text_field :event_day, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :event_place, class: 'text-white' %>
+            <%= f.text_field :event_place, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :limit_num_people, class: 'text-white' %>
+            <%= f.text_field :limit_num_people, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :limit_date, class: 'text-white' %>
+            <%= f.text_field :limit_date, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, class: 'text-white' %>
+            <%= f.password_field :password, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation, class: 'text-white' %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+
+          <%= f.submit "登録", class: 'btn-block btn-white' %>
+        <% end %>
+        <%= link_to 'イベントリストに戻る', events_index_path ,class: 'text-white' %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -6,6 +6,9 @@ h1, h2 {
   color: #fff;
 }
 
+
+body { padding-top: 50px; }
+
 .btn-white {
   color: #fff;
   border: 1px solid #fff;
@@ -30,7 +33,6 @@ h1, h2 {
   background-color: #464646;
 }
 
-
 .top-hero-container {
   padding-top: 220px;
   h1 {
@@ -41,6 +43,15 @@ h1, h2 {
   h2 {
     margin-bottom: 60px;
   }
+}
+
+.pwf {
+  font-size: 26px;
+  color: white;
+  text-align: center;
+  vertical-align: bottom;
+  margin-top: 26px;
+  text-decoration: underline;
 }
 
 .alert {

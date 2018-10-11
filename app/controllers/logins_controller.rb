@@ -5,9 +5,8 @@ class LoginsController < ApplicationController
   def create
     user = User.find_by(account_name: params[:session][:account_name])
     if user && user.authenticate(params[:session][:password])
-      sing_in(@user)
-      #後ほどリダイレクト先をインデックスへ変更
-      redirect_to root_path, success: 'ログインに成功しました'
+      log_in user
+      redirect_to 'http://localhost:3000/groups/index', success: 'ログインに成功しました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
       render :new
@@ -28,5 +27,9 @@ class LoginsController < ApplicationController
   def log_out
     session.delete(:user_id)
     @current_user = nil
+  end
+
+  def logged_in?
+    !current_user.nil?
   end
 end

@@ -1,0 +1,31 @@
+<div class="top-hero-wrapper text-center">
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <br><br><br><br><br><br>
+        <h1 class="text-center text-white">MAKE_GROUP</h1>
+        <%= form_for @group do |f| %>
+          <div class="form-group">
+            <%= f.label :group_name, class: 'text-white' %>
+            <%= f.text_field :group_name, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :group_type, class: 'text-white' %>
+            <%= f.text_field :group_type, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :group_image, class: 'text-white' %>
+            <%= f.text_field :group_image, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= f.label :group_comment, class: 'text-white' %>
+            <%= f.text_field :group_comment, class: 'form-control' %>
+          </div>
+          <%= f.submit "登録", class: 'btn-block btn-white' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<br>
+<div class="container">
+  <!-- 上部　Welcome Link_Box -->
+  <div class="row">
+    <div class="col-md-6">
+    <h1>EVENT_LIST</h1>
+    </div>
+      <div class="col-md-3"><%= link_to 'MAKE_GROUP', new_group_path ,class: 'btn-block link_box' %></div>
+      <div class="col-md-3"><%= link_to 'MY_PAGE', 'http://localhost:3000/mypages/index' ,class: 'btn-block link_box' %></div>
+  </div>
+
+  <p>-------------　↓　イベントアド部分　↓　--------------<p>
+
+  <%= link_to "イベントアド", new_event_path, method: :get %>
+
+  <p>-------------　↑　イベントアド部分　↑　--------------<p>
+
+
+  <% @events.each do |event| %>
+   <div class="row">
+     <h2>
+      <%= link_to "#{event.event_name}", events_show_path(event, id: "#{event.id}"), method: :get %>
+     </h2>
+   </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,23 @@
+<br>
+<div class="container">
+  <!-- 上部　Welcome Link_Box -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="welcome_name">Welcome Back <%= @name.account_name %> !!!</div>
+    </div>
+      <div class="col-md-3"><%= link_to 'GO_FIND_GROUP', groups_path ,class: 'btn-block link_box' %></div>
+      <div class="col-md-3"><%= link_to 'MAKE_GROUP',  new_group_path ,class: 'btn-block link_box' %></div>
+  </div>
+
+  <!-- 中部 MyImage MyBgImage Edit 後ほど実装 -->
+  <div class="row">
+    <div class="col-md-3">MyImage</div>
+    <div class="col-md-9">MyBgImage</div>
+  </div>
+
+  <!-- 下部 SCHEDULE BELONG -->
+  <div class="row">
+    <div class="col-md-4">SCHEDULE MAKING EVENT</div>
+  　<div class="col-md-8">BELONG GROUP</div>
+  </div>
+</div>

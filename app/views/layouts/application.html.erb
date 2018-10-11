@@ -20,11 +20,13 @@
           <span class="navbar-brand">Come On Friend</span>
         <% end %>
         <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
             <li>
               <%= link_to logout_path, method: :delete do %>
                 LOGOUT
               <% end %>
             </li>
+          <% else %>
             <li>
               <%= link_to new_user_path do %><!--後ほどログアウトページへ-->
                 SING IN
@@ -35,6 +37,7 @@
                 LOGIN
               <% end %>
             </li>
+          <% end %>
         </ul>
       </div>
     </nav>
