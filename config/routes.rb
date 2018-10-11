@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+  get 'password_resets/edit'
   root 'initials#index'
   get 'initials/about'
   get 'events/index'
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
   resources :groups
   resources :events
   resources :indexs
+  resources :password_resets,     only: [:new, :create, :edit, :update]
 
   get    '/login',   to: 'logins#new' #ログインするためのフォームを表示するページを取得する
   post   '/login',   to: 'logins#create' #新しくメールアドレスやパスワード送信してもらい、データをもとにSessionを作成する
